@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import 'fontawesome-all.min.css';
+@import "fontawesome-all.min.css";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 /*
 	Phantom by HTML5 UP
@@ -1774,10 +1774,10 @@ input[type=radio] {
 input[type=checkbox] + label,
 input[type=radio] + label {
   text-decoration: none;
-  color: #ffffff;
+  color: #585858;
   cursor: pointer;
   display: inline-block;
-  font-size: 1em;
+  font-size: 1.11em;
   font-weight: 300;
   padding-left: 2.55em;
   padding-right: 0.75em;
@@ -2076,7 +2076,7 @@ button:disabled,
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  postiion: relative;
+  position: relative;
   margin: -2.5em 0 0 -2.5em;
 }
 .tiles article {
@@ -2120,26 +2120,6 @@ button:disabled,
   z-index: 1;
   opacity: 0.8;
 }
-.tiles article > .image:after {
-  pointer-events: none;
-  -moz-transition: opacity 0.5s ease;
-  -webkit-transition: opacity 0.5s ease;
-  -ms-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  opacity: 0.25;
-  z-index: 2;
-}
 .tiles article > a {
   display: -moz-flex;
   display: -webkit-flex;
@@ -2170,8 +2150,12 @@ button:disabled,
   border-radius: 4px;
   border-bottom: 0;
   color: #ffffff;
+  text-align: center;
   text-decoration: none;
   z-index: 3;
+}
+.tiles article > a > * {
+  margin: 0.5em 0;
 }
 .tiles article > a > :last-child {
   margin: 0;
@@ -2197,22 +2181,22 @@ button:disabled,
   margin-bottom: 0;
 }
 .tiles article.style1 > .image:before {
-  background-color: #f2849e;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .tiles article.style2 > .image:before {
-  background-color: #7ecaf6;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .tiles article.style3 > .image:before {
-  background-color: #7bd0c1;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .tiles article.style4 > .image:before {
-  background-color: #c75b9b;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .tiles article.style5 > .image:before {
-  background-color: #ae85ca;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .tiles article.style6 > .image:before {
-  background-color: #8499e7;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 body:not(.is-touch) .tiles article:hover > .image {
   -moz-transform: scale(1.1);
@@ -2709,6 +2693,58 @@ body.is-menu-visible #menu .close {
   #wrapper > * > .inner {
     padding: 0 1.25em;
   }
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+  z-index: 4;
+  padding: 1em;
+}
+.modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
+  text-align: center;
+}
+.modal label {
+  color: #585858;
+  font-weight: bold !important;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 2em;
+  margin: 20% auto;
+  position: relative;
+  max-width: 400px;
+  border-radius: 4px;
+}
+
+#total-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  background-color: #333333;
+  color: #f6f6f6;
+  z-index: 7;
+}
+#total-footer > * {
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

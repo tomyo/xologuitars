@@ -58,22 +58,36 @@
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="images/neck.jpg" alt="" />
 									</span>
-									<a href="javascript:;">
+									<a href="javascript: document.querySelector('#neck-modal').classList.add('open');" >
 										<h2>Neck</h2>
 										<h1></h1>
 										<div class="content">
-											<div>
-												<input type="radio" id="neck-maple-1p" name="neck" value="0">
-												<label for="neck-maple-1p">Maple</label>
-											</div>
-											<div>
-												<input type="radio" id="mahogani" name="neck" value="0">
-												<label for="mahogani">Mahogani</label>
-											</div>
+											<p></p>
 										</div>
 									</a>
+									<div id="neck-modal" class="modal">
+										<div class="modal-content">
+											<h2>Choose Neck</h2>
+											<div>
+												<input type="radio" id="neck-maple-1p" name="neck" value="0">
+												<label for="neck-maple-1p">Maple 1p</label>
+												<span></span>
+											</div>
+											<div>
+												<input type="radio" id="neck-maple-3p" name="neck" value="15">
+												<label for="neck-maple-3p">maple 3p (Mahogani)</label>
+												<span></span>
+											</div>
+											<div>
+												<input type="radio" id="neck-mahogani" name="neck" value="35">
+												<label for="neck-mahogani">Mahogani 1p</label>
+												<span></span>
+											</div>
+
+										</div>
+									</div>
 								</article>
 								<article class="style2">
 									<span class="image">
@@ -200,6 +214,10 @@
 						</div>
 					</div>
 
+				<div id="total-footer">
+					<h2>Total: $<span id="totalPrice" data-basePrice="1180"></span></h2>
+				</div>
+
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
@@ -249,6 +267,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
 
 	</body>
 </html>
