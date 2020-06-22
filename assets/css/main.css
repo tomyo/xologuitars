@@ -2701,8 +2701,11 @@ body.is-menu-visible #menu .close {
 }
 
 .modal {
-  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
   top: 0;
   right: 0;
   bottom: 0;
@@ -2724,8 +2727,6 @@ body.is-menu-visible #menu .close {
 .modal-content {
   background-color: #ffffff;
   padding: 2em;
-  margin: 20% auto;
-  position: relative;
   max-width: 400px;
   border-radius: 4px;
 }
