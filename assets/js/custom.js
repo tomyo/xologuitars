@@ -38,8 +38,9 @@ function updatePriceInTileContent(input) {
 
 
 // Events
-
-document.querySelector(".modal").addEventListener("click", handleModalOption);
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", handleModalOption);
+});
 
 function handleModalOption(event) {
   if (event.target.classList.contains("modal")) {
@@ -50,7 +51,7 @@ function handleModalOption(event) {
     let input = event.target;
     let label = input.nextElementSibling;
     let labelText = label.innerText;
-    let title = input.closest("article").querySelector("h1");
+    let title = input.closest("article").querySelector(".js-chosen-option");
     title.innerText = labelText;
     input.closest(".modal").classList.remove("open");
     changeTileImage(input);
